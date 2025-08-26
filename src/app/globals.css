@@ -1,26 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @import "tailwindcss";
 
 :root {
+  /* Colaboraê Brand Colors */
+  --colaborae-blue: #022744;
+  --colaborae-green: #9bd60c;
+  --colaborae-coral: #ff5e5b;
+  --colaborae-cyan: #00d1ff;
+
+  /* Base colors */
   --background: #ffffff;
-  --foreground: #171717;
-}
+  --foreground: #022744;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Custom Gradients */
+  --gradient-hero: linear-gradient(135deg, #011522, #000a0f);
+  --gradient-events: linear-gradient(180deg, #000a0f, #011522);
+  --gradient-accent: linear-gradient(90deg, #9bd60c, #00d1ff);
+  --gradient-coral: linear-gradient(135deg, #ff5e5b, #e54845);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Section colors */
+  --dark-bg: #0a0a0a;
+  --dark-foreground: #f2f2f2;
+  --light-bg: #f8fafc;
+  --light-foreground: #022744;
 }
 
 body {
+  font-family: "Inter", system-ui, sans-serif;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* Custom component classes */
+.section-dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-foreground);
+}
+
+.section-hero {
+  background: var(--gradient-hero);
+  color: var(--dark-foreground);
+}
+
+.section-events {
+  background: var(--gradient-events);
+  color: var(--dark-foreground);
+}
+
+.section-light {
+  background-color: var(--light-bg);
+  color: var(--light-foreground);
+}
+
+.section-bistro {
+  background-color: #ffffff;
+  color: var(--light-foreground);
+}
+
+.neon-green {
+  color: var(--colaborae-green);
+  text-shadow: 0 0 10px rgba(155, 214, 12, 0.5);
+}
+
+.neon-cyan {
+  color: var(--colaborae-cyan);
+  text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+button {
+  cursor: pointer;
 }
