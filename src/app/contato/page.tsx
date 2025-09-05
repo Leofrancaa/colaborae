@@ -112,7 +112,7 @@ const Contato = () => {
                         <br />
                         Rio Vermelho, Salvador - BA
                         <br />
-                        CEP: 41950-600
+                        CEP: 41950-602
                       </p>
                     </div>
                   </div>
